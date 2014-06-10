@@ -1,0 +1,4 @@
+#!/bin/bash
+rm /etc/apache2/sites-available/*$2-$1*
+rm /etc/apache2/sites-enabled/*$2-$1*
+rm -r /home/$3/$2/subdomains/$1

@@ -1,0 +1,14 @@
+#!/bin/bash
+sudo mkdir /home/$2/$1
+sudo mkdir /home/$2/$1/subdomains
+sudo cp /root/template /etc/apache2/sites-available/0001-$1.conf
+sudo cp /root/htaccess /home/$2/$1/.htaccess
+
+sudo sed -i 's/DOMAINNAME/'$1'/g' /home/$2/$1/.htaccess
+
+sudo sed -i 's/FUCKIP/'*'/g' /etc/apache2/sites-available/0001-$1.conf
+sudo sed -i 's/DOMAINNAME/'$1'/g' /etc/apache2/sites-available/0001-$1.conf
+sudo sed -i 's/FUCKUSER/'$2'/g' /etc/apache2/sites-available/0001-$1.conf
+sudo a2ensite 0001-$1.conf
+sudo service apache2 reload
+sudo chown $2:$2 /home/$2/$1

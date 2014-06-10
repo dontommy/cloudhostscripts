@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+import sys
+import pyrax
+
+dabadomain=sys.argv[1]
+dabamail=sys.argv[2]
+
+
+pyrax.set_setting("identity_type", "rackspace")
+pyrax.set_credentials("USER", "APIKEY")
+dns = pyrax.cloud_dns
+dom = dns.create(name=dabadomain, emailAddress=dabamail,ttl=600)
+
+
+recs = [{
+        "type": "A",
+        "name": dabadomain,
+        "data": "LOADBALANCERIP",
+        "ttl": 6000,
+        }]
+dom.add_records(recs)
+
+
+
+#print(dns.list())

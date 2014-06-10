@@ -1,0 +1,14 @@
+#!/bin/bash
+fulld=$1"."$2
+sudo mkdir /home/$3/$2/subdomains/$1
+sudo cp /root/subtemplate /etc/apache2/sites-available/0002-$2"-"$1.conf
+sudo cp /root/htaccess /home/$3/$2/subdomains/$1/.htaccess
+sudo sed -i 's/DOMAINNAME/'$fulld'/g' /home/$3/$2/subdomains/$1/.htaccess
+sudo sed -i 's/FUCKIP/'*'/g' /etc/apache2/sites-available/0002-$2"-"$1.conf
+sudo sed -i 's/FULLNAME/'$fulld'/g' /etc/apache2/sites-available/0002-$2"-"$1.conf
+sudo sed -i 's/FUCKDOMAIN/'$2'/g' /etc/apache2/sites-available/0002-$2"-"$1.conf
+sudo sed -i 's/FUCKSUB/'$1'/g' /etc/apache2/sites-available/0002-$2"-"$1.conf
+sudo sed -i 's/FUCKUSER/'$3'/g' /etc/apache2/sites-available/0002-$2"-"$1.conf
+sudo a2ensite 0002-$2"-"$1.conf
+sudo service apache2 reload
+sudo chown -R $3:$3 /home/$3/$2/subdomains/$1

@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+import sys
+import pyrax
+
+dabadomain=sys.argv[1]
+
+
+pyrax.set_setting("identity_type", "rackspace")
+pyrax.set_credentials("USER", "APIKEY")
+dns = pyrax.cloud_dns
+
+dom = dns.find(name=dabadomain)
+
+dom.delete()
