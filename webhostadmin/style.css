@@ -1,0 +1,101 @@
+* {
+    margin:0;
+    padding:0;
+}
+html {
+}
+body {
+    background-color:#fff;
+    font-size:14px;
+    font-family:Tahoma,Verdana;
+    color:#000;
+}
+img {
+    border:0;
+}
+#container {
+    margin:0 auto;
+    width:96%;
+    max-width:960px;
+    margin-top:10px;
+}
+header {
+    float:left;
+    width:100%;
+    text-align:center;
+    border-bottom:2px solid #ddd;
+    margin-bottom:10px;
+}
+header h1 {
+    color:#c0c0c0;
+    text-shadow:1px 1px #000;
+}
+nav {
+    float:left;
+    width:20%;
+    min-height:300px;
+}
+nav a {
+    display:block;
+    width:96%;
+    text-align:center;
+    padding:5px;
+    background-color:#ddd;
+    border:1px solid #000;
+    margin:5px;
+    color:#0000ff;
+}
+nav a:hover {
+    text-decoration:none;
+}
+.menustyle {
+    display:block;
+    width:96%;
+    text-align:center;
+    padding:5px;
+    background-color:#000;
+    border:1px solid #ddd;
+    margin:5px;
+    color:#fff;
+    text-decoration:none;
+}
+main {
+    float:right;
+    width:70%;
+    min-height:300px;
+}
+main a {
+    color:#0000ff;
+}
+main a:hover {
+    color:#ff0000;
+}
+label {
+    float:left;
+    width:150px;
+}
+input {
+    width:300px;
+}
+.submit {
+    width:450px;
+    text-align:center;
+    padding:5px;
+    background-color:#ddd;
+    border:1px solid #000;
+    margin:5px;    
+}
+select {
+    width:300px;
+}
+textarea {
+    width:300px;
+    height:200px;
+}
+footer {
+    float:left;
+    width:100%;
+    margin-top:100px;
+    border-top:2px solid #ddd;
+    text-align:center;
+}

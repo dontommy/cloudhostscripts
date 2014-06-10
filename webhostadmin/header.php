@@ -1,0 +1,1 @@
+<header><a href="index2.php" target="_top" title="Forsiden"><img src="logo.png"></a></a><br /><h1>Web Hosting Admin Interface</h1></header>
