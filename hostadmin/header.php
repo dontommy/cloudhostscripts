@@ -1,0 +1,1 @@
+<header><img src="logo.png"></a><br /><h1>Hosting Admin Interface</h1></header>
