@@ -23,7 +23,7 @@
             <?php
             if(isset($_POST['submit'])) {
             $logind = $_POST['logind'];
-            if($logind == "0542") {
+            if($logind == "PASS") {
                 $_SESSION['daba_login'] = 1;
                 header("Location: index2.php");
             } else {
